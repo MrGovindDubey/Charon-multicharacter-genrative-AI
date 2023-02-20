@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Project Sudo</title>
+    <link rel="stylesheet" href="./styles/home.css">
+    <link rel="icon" type="image/x-icon" href="./../favicon.png">
+</head>
+<body>
+    <div class="navbar">
+        <div id="name"><p>Charon</p></div>
+        <div id="switch">
+            <a href="./../Modern/home.html"> <img src="./res/switch-chip.png" alt=""> </a>
+        </div>
+    </div>
+
+    <div class="main">
+        <div class="box" id="box1">
+            <div class="btn" id="btn1">
+                <input type="radio" name="prompt" id="As" checked="checked">
+                <label for="As">Assistant</label>
+            </div>
+            <div class="btn" id="btn2">
+                <input type="radio" name="prompt" id="Do">
+                <label for="Do">Doctor</label>
+            </div>
+            <div class="btn" id="btn3">
+                <input type="radio" name="prompt" id="De">
+                <label for="De">Developer</label>
+            </div>
+            <div class="btn" id="btn4">
+                <input type="radio" name="prompt" id="Te">
+                <label for="Te">Teacher</label>
+            </div>
+        </div>
+        <div class="center">
+            <div class="face">
+                <div class="gear-1">
+                    <img src="./res/g1.png" alt="">
+                </div>
+                <div class="gear-2">
+                    <img src="./res/g2.png" alt="">
+                </div>
+                <div class="gear-3">
+                    <img src="./res/g3.png" alt="">
+                </div>
+            </div>
+            <div class="output"><span></span></div><!-- here we will show output -->
+            <div class="input"></div><!-- here we will show input -->
+        </div>
+        <div class="box" id="box2">
+            <div class="btn" id="btn5">
+                <input type="radio" name="prompt" id="Li">
+                <label for="Li">Linux Terminal</label>
+            </div>
+            <div class="btn" id="btn6">
+                <input type="radio" name="prompt" id="Mo">
+                <label for="Mo">Movie Character</label>
+            </div>
+            <div class="btn" id="btn7">
+                <input type="radio" name="prompt" id="Ps">
+                <label for="Ps">psychologist</label>
+            </div>
+            <div class="btn" id="btn8">
+                <input type="radio" name="prompt" id="Cu">
+                <label for="Cu">Custom</label>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

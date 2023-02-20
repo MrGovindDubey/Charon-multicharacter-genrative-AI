@@ -1,0 +1,184 @@
+@import url('https://fonts.googleapis.com/css2?family=Babylonica&family=Marck+Script&family=Reenie+Beanie&display=swap');
+*{
+    box-sizing: border-box;
+    padding: 0px; margin: 0px;
+}
+body {
+    background-image: url("./../res/light-wood.jpeg");
+    background-repeat: no-repeat;
+    background-size: 100vw 100vh;
+}
+/* ----- NAVBAR ----- */
+.navbar {
+    color: black;
+    margin: 1vw; padding: 0.5vw;
+    display: flex;
+    justify-content: right;
+    align-items: center;
+}
+
+.navbar div { margin: 0vw 0.5vw; }
+
+.navbar div#name {
+    position: absolute;
+    font-size: 12vh;
+    font-family: 'Babylonica';
+    color: black;
+    left: 1vw;
+    font-weight: bold; font-style: italic;
+    padding: 0.6vh;
+    /* background-image: url("./../res/dark-wood.jpeg"); */
+}
+
+.navbar div#name::before {
+    content: '';
+    position: absolute;
+    top: -3px; left: -3px; bottom: -3px; right: -3px;
+    transform: skew(10deg, 2deg);
+    z-index: -1;
+}
+
+#switch {
+    text-decoration: none;
+    display: block;
+    width: 3.5vw; height: 3.5vw;
+}
+
+#switch img {
+    width: 3vw; height: 3vw;
+    margin: 0.25vw;
+    cursor: pointer;
+}
+/* ----- MAIN ----- */
+.main {
+    display: grid;
+    gap: 1vw;
+    grid-template-areas: 'b1 cent cent cent cent cent b2';
+}
+
+/* ----- BOX-BUTTON ----- */
+#box1 { grid-area: b1; }
+#box2 { grid-area: b2; }
+
+.box {
+    display: flex;
+    flex-flow: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.btn { margin: 4vh 1vw; }
+
+.btn input[type="radio"] { display: none; }
+
+.btn label {
+    display: block;
+    color: rgb(250, 221, 178);
+    font-family: 'Audiowide', cursive;
+    text-align: center;
+    padding-top: 7%;
+    font-size: larger;
+    width: 15vw; height: 8vh;
+    position: relative;
+    background: url("./../res/dark-wood2.jpeg");
+    border-radius: 50vw;
+    transition: all 0.75s ease 0s;
+    cursor: pointer;
+    box-shadow: -1vh 1vh 3vh black;
+    text-shadow: -2px 2px black;
+}
+
+.btn label:hover::before {
+    content: '';
+    border-radius: 50vw;
+    position: absolute;
+    top: 0px; left: 0px; bottom: 0px; right: 0px;
+    background-color: rgba(250, 235, 215, 0.104);
+    z-index: 2;
+}
+.btn label:hover{
+    color: white;
+}
+input[type="radio"]:checked + label {
+    color: goldenrod;
+    text-shadow: -2px 2px 4px black;
+    box-shadow: inset 0px 0px 13px rgba(0, 0, 0, 0.807);
+}
+/* ----- CENTER ----- */
+.center {
+    text-align: center;
+    color: black;
+    grid-area: cent;
+    height: 89vh;
+}
+
+.face {
+    height: 40vw; width: 40vw;
+    position: relative;
+    top: -18vh; left: -17vh;
+    z-index: -3;
+}
+
+.gear-1 img{
+    display: inline-block;
+    position: absolute;
+    width: 23vw; height: 23vw;
+    top: 40vh; left: 9.5vw;
+    animation: rotate-cw2 4s linear 0s infinite forwards;
+}
+.gear-3 img{
+    display: inline-block;
+    position: absolute;
+    width: 10vw; height: 10vw;
+    top: 31vh; left: 7vw;
+    animation: rotate-ccw 1.25s linear 0s infinite forwards;
+}
+.gear-2 img{
+    display: inline-block;
+    position: absolute;
+    width: 16vw; height: 16vw;
+    top: 8vh; left: 12vw;
+    animation: rotate-cw 3s linear 0s infinite forwards;
+}
+
+.output {
+    border-radius: 8vh;
+    background-image: url("./../res/page.jpeg");
+    background-position: -5vw -4vw;
+    height: 23vw; width: 40vw;
+    display: flex;
+    flex-flow: column;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    top: -30vw; left: 23vw;
+    box-shadow: -5px 5px 10px rgba(0, 0, 0, 0.651);
+}
+.input {
+    height: 10vh; width: 63vw;
+    position: relative;
+    top: -27vw; left: 0vw;
+    display: flex;
+    flex-flow: column;
+    align-items: center;
+    justify-content: center;
+    border-radius: 3vh;
+    background-image: url("./../res/page.jpeg");
+    background-position: 0vw -4vw;
+    box-shadow: -5px 5px 10px rgba(0, 0, 0, 0.651);
+}
+
+@keyframes rotate-cw {
+    0% {  }
+    100% { transform: rotate(360deg); }
+}
+
+@keyframes rotate-ccw {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(-360deg); }
+}
+
+@keyframes rotate-cw2 {
+    0% { transform: rotate(20deg); }
+    100% { transform: rotate(380deg); }
+}
